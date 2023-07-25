@@ -8,11 +8,14 @@ function App() {
 
   return (
     <>
-      <div>
-        {/* <ContactList setSelectedContactId={setSelectedContactId} /> */}
-        
-        {selectedContactId ? <div>selectedContactId={selectedContactId}</div> : <ContactList />}
-      </div>
+    {selectedContactId ? (
+        <SelectedContact
+          selectedContactId={selectedContactId}
+          setSelectedContactId={setSelectedContactId}
+        />
+      ) : (
+        <ContactList setSelectedContactId={setSelectedContactId} />
+      )}
     </>
   );
 }
