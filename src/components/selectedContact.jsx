@@ -16,7 +16,7 @@ const SelectedContact = ({ selectedContactId, setSelectedContactId }) => {
       } catch (error) {
         console.error(error);
       }
-    }
+    };
     getSelectedContact();
   }, [selectedContactId]);
 

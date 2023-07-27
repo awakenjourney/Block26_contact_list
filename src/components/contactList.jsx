@@ -1,6 +1,7 @@
 import React, { useState, useEffect, } from "react";
 import axios from "axios";
 import ContactRow from "./contactRow";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const API_URL = "https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users";
 
@@ -23,17 +24,17 @@ const ContactList = ({setSelectedContactId}) => {
   }, []);
 
   return (
-    <table>
-      <thead>
+    <table className="table table-striped table-bordered">
+      <thead className="thead-dark">
         <tr>
-          <th colSpan="3">Contact List</th>
+          <th scope="col" colSpan="3">Contact List</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Name</td>
-          <td>Email</td>
-          <td>Phone</td>
+          <td >Name</td>
+          <td >Email</td>
+          <td >Phone</td>
         </tr>
         {contacts.map((contact) => (
           <ContactRow 
